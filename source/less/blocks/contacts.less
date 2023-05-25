@@ -1,0 +1,56 @@
+.contacts {
+  padding-bottom: 40px;
+}
+
+.contacts__item {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: @white;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__icon {
+  position: relative;
+  margin-right: 4px;
+
+  &--ig,
+  &--tiktok {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--ig {
+      width: 28px;
+      height: 28px;
+    }
+
+    &--tiktok {
+      width: 23px;
+      height: 26px;
+    }
+
+    &--litres {
+      width: 58px;
+      height: 13px;
+    }
+  }
+}
+

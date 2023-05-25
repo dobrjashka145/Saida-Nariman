@@ -1,0 +1,223 @@
+.advantages {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 114px;
+  }
+}
+
+.advantages__content-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    margin-top: 68px;
+  }
+}
+
+.advantages__results {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 179px;
+  margin-bottom: 22px;
+  margin-top: 26px;
+  padding-left: 14px;
+  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, @white 100%), url("../img/living-room_mobile@1x.webp");
+  background-size: 100%, cover;
+  border-radius: 16px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, @white 100%), url("../img/living-room_mobile@2x.webp");
+    background-size: 100%, cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 325px;
+    margin-top: 68px;
+    margin-bottom: 40px;
+    padding-left: 22px;
+    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, @white 100%), url("../img/living-room_tablet@1x.webp");
+    background-size: 100%, cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, @white 100%), url("../img/living-room_tablet@2x.webp");
+      background-size: 100%, cover;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 640px;
+      min-height: 360px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 63px;
+      padding-left: 24px;
+      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, @white 100%), url("../img/living-room_desktop@1x.webp");
+      background-size: 100%, image-size("../img/living-room_desktop@1x.webp");
+      background-position: left top, right top;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, @white 100%), url("../img/living-room_desktop@2x.webp");
+        background-size: 100%, cover;
+      }
+    }
+  }
+}
+
+.advantages__results-title {
+  margin: 0;
+  padding-right: 134px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3d69d7;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 18px;
+    padding-right: 260px;
+    font-size: 22px;
+    line-height: 28px;
+    color: #4f239d;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+}
+
+.advantages__results-text {
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 267px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.44px;
+    color: fade(@black, 87%);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 24px;
+  }
+}
+
+.advantages__results-image {
+  position: absolute;
+  bottom: 0;
+  right: -17px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 0;
+    right: -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -47px;
+  }
+}
+
+.advantages__results-image img {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 278px;
+    height: 435px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 320px;
+    height: 462px;
+  }
+}
+
+.advantages__list {
+  .list-reset(86px);
+
+  @media (min-width: @tablet-width) {
+    padding-left: 112px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
+    padding-top: 42px;
+    padding-left: 130px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  opacity: 0.9;
+
+  &:last-child {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    left: -48px;
+    background-image: url("../img/icons/advantages-marker.svg");
+    background-size: 40px 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &:nth-child(2)::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &:nth-child(3)::before {
+    transform: translateY(-50%) rotate(calc(45deg * 2));
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+    font-size: 32px;
+    line-height: 39px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      left: -90px;
+      background-size: 80px 80px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 76px;
+    font-size: 40px;
+    line-height: 48px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      left: -120px;
+      background-size: 100px 100px;
+    }
+  }
+}

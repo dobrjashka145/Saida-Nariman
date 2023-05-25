@@ -1,0 +1,100 @@
+.enrollment-form__field {
+  position: relative;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  opacity: 0.7;
+
+  &:last-of-type {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    &:last-of-type {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.enrollment-form__input {
+  display: block;
+  width: 288px;
+  margin-top: 7px;
+  padding: 14px;
+  padding-left: 56px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: fade(@black, 87%);
+  background: @white;
+  border: none;
+  border-radius: 12px;
+  background-image: url("../img/gragient-border-form_mobile.svg");
+  background-size: calc(100% + 4px) calc(100% + 4px);
+  background-position: -2px -1px;
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 2px rgba(31, 41, 55, 0.08);
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: fade(@black, 38%);
+  }
+
+  &:focus {
+    outline: 2px solid saturate(#49ccf9, 50%);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 389px;
+    background-image: url("../img/gragient-border-form_tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+  }
+}
+
+.enrollment-form__input[name="tel"] {
+  padding-left: 93px;
+}
+
+.enrollment-form__tel-cod {
+  position: absolute;
+  top: 38px;
+  left: 55px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #0065ff;
+  background-color: transparent;
+}
+
+.enrollment-form__image {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  stroke: fade(@black, 60%);
+  z-index: 2;
+}
+
+.enrollment-form__input:focus + .enrollment-form__image {
+  stroke: darken(#49ccf9, 20%);
+}
+
+.enrollment-form__submit {
+  display: block;
+  width: 288px;
+  margin: 0 auto;
+  font-size: 16px;
+  box-shadow: 0 10px 15px rgba(51, 22, 102, 0.25), 0 1px 6px rgba(31, 41, 55, 0.1);
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    padding: 15px 55px;
+  }
+}

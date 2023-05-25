@@ -1,0 +1,139 @@
+.reviews {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 175px;
+  }
+}
+
+.reviews__title {
+  @media (min-width: @desktop-width) {
+    color: #141414;
+  }
+}
+
+.reviews__content-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 96px;
+  }
+}
+
+.reviews__slider {
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+    transform: none;
+    margin-bottom: 0;
+  }
+}
+
+.reviews__description {
+  position: relative;
+  width: 288px;
+  min-height: 170px;
+  margin: 0 auto;
+  padding-top: 17px;
+  padding-bottom: 21px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-image: url("../img/gradient-border-reviews_mobile.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 409px;
+    min-height: 145px;
+    padding-top: 13px;
+    padding-bottom: 6px;
+    padding-left: 37px;
+    padding-right: 37px;
+    background-image: url("../img/gradient-border-reviews_tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    min-height: 294px;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 41px;
+    padding-left: 47px;
+    padding-right: 47px;
+    background-image: url("../img/gradient-border-reviews_desktop.svg");
+    order: -1;
+  }
+}
+
+.reviews__description-title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 4px;
+    content: "";
+    background: linear-gradient(to right, #a35dff, #49ccf9);
+    border-radius: 4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &::after {
+      width: 100%;
+      bottom: -15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 76px;
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      color: #282828;
+
+      &::after {
+        width: 160px;
+        bottom: -36px;
+      }
+    }
+  }
+}
+
+.reviews__description-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #282828;
+  }
+}

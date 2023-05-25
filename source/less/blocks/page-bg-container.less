@@ -1,0 +1,14 @@
+.page-bg-container {
+  background: linear-gradient(270deg, @blue-base 0%, #5247d9 61.77%, #2d79d3 100%);
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(90deg, #1a21ca 0%, #3a66da 69.06%, #1a16d1 100%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-elements-top_desktop.svg"), url("../img/bg-elements-bottom_desktop.svg"), url("../img/bg-blue-top_desktop.svg"), url("../img/bg-blue-bottom_desktop.svg"), url("../img/circles_4px.svg"), url("../img/circles_2px.svg"), linear-gradient(to bottom, @blue-base 0%, @blue-base 2200px, #f5faff 2200px, #f5faff 5200px, @blue-base 5200px, @blue-base 100%);
+    background-size: image-size("../img/bg-elements-top_desktop.svg"), image-size("../img/bg-elements-bottom_desktop.svg"), 100% auto, 100% auto, image-size("../img/circles_4px.svg"), image-size("../img/circles_2px.svg"), 100%;
+    background-position: 40px 80px, left 147px bottom, left top, left bottom, right 3773px, left 4680px, left top;
+    background-repeat: no-repeat;
+  }
+}

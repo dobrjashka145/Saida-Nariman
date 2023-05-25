@@ -1,0 +1,92 @@
+.enrollment-card {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  min-height: 575px;
+  margin: 0 auto;
+  padding-top: 58px;
+  padding-bottom: 71px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: linear-gradient(90deg, #1a21ca 0%, #3a66da 69.06%, #1a16d1 100%);
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+    min-height: 589px;
+    padding: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1280px;
+    min-height: 720px;
+    padding: 120px;
+    background-image: url("../img/circles_modal.svg"), url("../img/bg-elements_modal.svg"), linear-gradient(90deg, #1a21ca 0%, #3a66da 69.06%, #1a16d1 100%);
+    background-size: image-size("../img/circles_modal.svg"), image-size("../img/bg-elements_modal.svg"), 100%;
+    background-position: right 39px bottom 47px, right bottom, left top;
+    background-repeat: no-repeat;
+  }
+}
+
+.enrollment-card__toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    top: 30px;
+    right: 30px;
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 42px;
+    right: 92px;
+    width: 75px;
+    height: 75px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: @white;
+    border-radius: 3px;
+
+    @media (min-width: @desktop-width) {
+      height: 6px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.enrollment-card__title.section-title {
+  margin-bottom: 26px;
+  font-size: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 58px;
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,27 @@
+.speakers {
+  @media (min-width: @desktop-width) {
+    padding-top: 122px;
+  }
+}
+
+.speakers__title {
+  margin-left: -5px;
+  margin-right: -5px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+  }
+}
+
+.speakers__slider {
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    transform: translateX(calc(-50% + 9px));
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
+  }
+}
