@@ -83,7 +83,7 @@ const minJS = () => {
 
 const copyImages = () => {
   return gulp.src([
-  'source/img/**/*.{jpg,jpeg,png,svg,webp,mp4,MP4}',
+  'source/img/**/*.{svg,webp,mp4}',
   ], {base: 'source'})
     .pipe(gulp.dest('build'));
 }
@@ -136,6 +136,7 @@ const watcher = () => {
 
 export const build = gulp.series(
     clean,
+    copyImages,
     gulp.parallel(
     copyFiles,
     styles,

@@ -4,7 +4,10 @@
   "description": "Сайт авторских курсов Саиды Нариман",
   "author": "Oksana Savinova (https://github.com/dobrjashka145)",
   "contributor": "Andrey Grachev (https://github.com/andreysgra)",
-  "repository": "github:dobrjashka145/Saida-Nariman",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:dobrjashka145/Saida-Nariman.git"
+  },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "^10.4.0",
@@ -31,8 +34,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
-    "deploy": "npm run build && gh-pages -d build",
     "build": "gulp build",
+    "deploy": "npm run build && gh-pages -d build",
     "start": "gulp"
   },
   "browserslist": [
